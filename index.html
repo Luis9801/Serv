@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servo Solar</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="body">
+    <STYLE>A {text-decoration: none;} </STYLE>
+    <header class="header">
+        <div>
+            <img src="logo.jpg" height="120px"  width="400px">
+        </div>    
+        <div class="title">
+            <h1>Ingeniería Electrónica</h1>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <ul class="menu">
+            <a>Panel Solar</a>
+        </ul> 
+    </nav>
+
+
+
+
+    <section id="section" class="section" >
+
+      <div class="slider" >
+         <input  type="range" min="0" max="180" class="servoslider" id="servoslider" onchange="servo(this.value)"/>
+      </div>
+
+      <div id="selector" class="selector">
+        Ángulo del servomotor = 0 º
+      </div>
+
+      <div class="switch-button">
+        <input type="checkbox" name="switch-button" id="switch-label" class="switch-button__checkbox">
+        <label for="switch-label" class="switch-button__label"></label>
+      </div>
+
+      <div id="check" class="check">
+        Control manual (ESP32)
+      </div>
+
+      <div id="postElement"></div>
+      <div id="postElement1"></div>
+      <div id="postElement2"></div>
+      <div id="postElement3"></div>
+
+    </section> 
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAvtfdxRgcfmD6BQDsI5nLm5hzDiZL-Hz8",
+        authDomain: "servosolar.firebaseapp.com",
+        projectId: "servosolar",
+        storageBucket: "servosolar.appspot.com",
+        messagingSenderId: "95511608280",
+        appId: "1:95511608280:web:a3ec6884ba43f42ccf50ad",
+        measurementId: "G-DFSWEBNEP5"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+<script src="./javascript.js"></script>
+
+</body>
+
+</html>
